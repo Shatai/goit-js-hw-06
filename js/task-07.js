@@ -1,9 +1,10 @@
 const inputEl = document.querySelector('#font-size-control');
 const spanEl = document.querySelector('#text');
 
-inputEl.addEventListener('input', (event) => {
-    const inputValue = event.target.value;
-    spanEl.style.fontSize = `${inputValue}px`;
+spanEl.style.fontSize = "56px";
 
+inputEl.addEventListener('input', onBlur);
 
-});
+function onBlur() {
+    spanEl.style.fontSize = `${inputEl.value}px`;
+}
