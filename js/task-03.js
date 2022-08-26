@@ -17,13 +17,13 @@ const galleryEl = document.querySelector('.gallery');
 const elements = [];
  
 for(const image of images) {
-
-  const el = galleryEl.insertAdjacentHTML('afterbegin', `<li class="list__item"><img src="${image.url}" alt="${image.alt}"></li>`);
+  const el = `<li class="list__item"><img src="${image.url}" alt="${image.alt}"></li>`;
   elements.push(el);
-
-    
-
 };
+
+
+const joined = elements.join("");
+galleryEl.insertAdjacentHTML('afterbegin', joined);
 
 
 
