@@ -29,11 +29,11 @@ function handleSubmit(event) {
   event.preventDefault();
   const formData = new FormData(event.currentTarget);
   const data = {};
-  formData.forEach((name, value) => {
-    if (!name || !value) {
+  formData.forEach((value, name) => {
+    if (!value) {
       alert("Усі поля повинні бути заповнені!");
     } else {
-      data[value] = name;
+      data[name] = value;
     }
   });
   if (data.email && data.password) {
